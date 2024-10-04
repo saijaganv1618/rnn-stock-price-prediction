@@ -9,8 +9,6 @@ To develop a Recurrent Neural Network model for stock price prediction.
 * Date, Opening Price, Highest Price, Lowest Price, Closing Price, Adjusted Closing Price, Volume
 * Based on the given features, develop a RNN model to predict, the price of stocks in future
 
-## Neural Network Model
-![WhatsApp Image 2023-10-02 at 15 46 48_8fb41ea6](https://github.com/Aashima02/rnn-stock-price-prediction/assets/93427086/777fce87-18bb-4ea3-80d5-0e3a6862055d)
 
 
 ## DESIGN STEPS
@@ -66,6 +64,7 @@ n_features = 1
 model = Sequential([layers.SimpleRNN(50,input_shape=(60,1)),
                     layers.Dense(1)])
 model.compile(optimizer='adam',loss='mse')
+print("Name:  JAGAN A     Register Number: 212221230037         ")
 model.summary()
 model.fit(X_train1,y_train,epochs=20, batch_size=32)
 ```
@@ -98,9 +97,9 @@ X_test.shape
 predicted_stock_price_scaled = model.predict(X_test)
 predicted_stock_price = sc.inverse_transform(predicted_stock_price_scaled)
 
+print("Name:   JAGAN A        Register Number:  212221230037   ")
 plt.plot(np.arange(0,1384),inputs, color='red', label = 'Test(Real) Google stock price')
-plt.plot(np.arange(60,1384),predicted_stock_price, color='blue', 
-		label = 'Predicted Google stock price')
+plt.plot(np.arange(60,1384),predicted_stock_price, color='blue', label = 'Predicted Google stock price')
 plt.title('Google Stock Price Prediction')
 plt.xlabel('Time')
 plt.ylabel('Google Stock Price')
@@ -119,7 +118,8 @@ print("Mean Squared Error = ",mse)
 
 ### True Stock Price, Predicted Stock Price vs time
 
-![image](https://github.com/Aashima02/rnn-stock-price-prediction/assets/93427086/10eff697-1fbd-48fc-99a3-96c21a488ba1)
+<img width="510" alt="dl22" src="https://github.com/user-attachments/assets/6481fd14-602b-49bc-9737-ce4db5bb23e1">
+
 
 
 ### Mean Square Error
